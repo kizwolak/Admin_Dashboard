@@ -49,12 +49,12 @@ body {
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 2fr 3fr;
     align-items: center;
-    background-color: #f9a8d4;  
+    background-color: #f9a8d4;
 }
 
-
 #header>div {
-    margin-left: 50%;
+    margin-left: 3em;
+    justify-items: center;
 }
 
 input {
