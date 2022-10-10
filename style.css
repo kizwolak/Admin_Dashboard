@@ -89,17 +89,13 @@ body {
     align-items: center;
 }
 
-#searchbar {
-    display: grid;
-    align-items: center;
-    height: fit-content;
-}
-
 #searchbar>* {
     height: 2em;
-    justify-items: start;
 }
 
+#topright>* {
+    height: 2em;
+}
 
 input {
     background-color: white;
