@@ -79,8 +79,6 @@ body {
     grid-template-columns: 3fr 2fr;
     grid-auto-rows: minmax(min-content, max-content);    
     background-color: #f9a8d4;
-    align-items: center;
-    justify-items: center;
 }
 
 #header>div {
@@ -89,6 +87,17 @@ body {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: fr;
     align-items: center;
+}
+
+#searchbar {
+    display: grid;
+    align-items: center;
+    height: fit-content;
+}
+
+#searchbar>* {
+    height: 2em;
+    justify-items: start;
 }
 
 
@@ -100,7 +109,7 @@ input {
     font-family: "Poppins";
     padding: 0 10px;
     height: 40%;
-    width: 130%;
+    width: 70%;
 }
 
 input:focus {
