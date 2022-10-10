@@ -3,6 +3,12 @@
     src: url(Poppins-SemiBold.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Poppins";
 }
@@ -17,15 +23,19 @@ body {
     height: 100vh;
 }
 
+.container>* {
+    padding-top: 1em;
+}
+
 #sidebar {
     display: grid;
     background-color: #3f6212;
     font-family: 'Poppins', 'Times New Roman', sans-serif;
     grid-area: sidebar;
     color: white;
-    row-gap: 2em;
+    row-gap: 1.3em;
     font-size: 1.4em;
-    align-items: stretch;
+    align-items: center;
     grid-auto-rows: minmax(min-content, max-content);
     padding-left: 1em;
 }
@@ -45,7 +55,12 @@ body {
     display: grid;
     grid-auto-rows: minmax(min-content, max-content);
     gap: 1em;
+    align-items: center;
+}
 
+#sidebtns1, #sidebtns2 {
+    display: grid;
+    grid-auto-rows: 2.5em;
 }
 
 #sidebtns1>div, #sidebtns2>div {
@@ -64,12 +79,16 @@ body {
     grid-template-columns: 3fr 2fr;
     grid-auto-rows: minmax(min-content, max-content);    
     background-color: #f9a8d4;
-    align-content: center;
+    align-items: center;
     justify-items: center;
 }
 
 #header>div {
     padding-left: 3em;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: fr;
+    align-items: center;
 }
 
 
@@ -81,6 +100,7 @@ input {
     font-family: "Poppins";
     padding: 0 10px;
     height: 40%;
+    width: 130%;
 }
 
 input:focus {
