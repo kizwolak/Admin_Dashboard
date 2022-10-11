@@ -76,13 +76,13 @@ body {
 
 #header {
     display: grid;
-    grid-template-columns: 4 3fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: 1fr 1fr;
     background-color: #f9a8d4;
-    row-gap: 1.5em;
+    row-gap: 0em;
     grid-template-areas: 
-    "searchbar searchbar searchbar searchbar topright topright topright"
-    "lowleft lowleft lowleft lowleft buttons buttons buttons";
+    "searchbar searchbar searchbar topright topright"
+    "lowleft lowleft lowleft buttons buttons";
 }
 
 #header>div {
@@ -97,7 +97,7 @@ padding-left: 3em;
 }
 
 #searchbar>* {
-    height: 2em;
+    height: 3em;
 }
 
 #topright {
@@ -108,7 +108,8 @@ padding-left: 3em;
 }
 
 #topright>* {
-    height: 2em;
+    height: 2.5em;
+    font-size: 2em;
 }
 
 #lowleft {
@@ -121,20 +122,12 @@ padding-left: 3em;
 
 #lowleft>img {
     grid-area: img;
-    max-height: 4em;
-    max-width: 3em;
+    max-height: 6em;
+    max-width: 5em;
 }
 
-#lowleft>p {
-    grid-area: p;
-}
-
-#lowleft>h3 {
-    grid-area: h3;
-}
-
-#buttons {
-    grid-area: buttons;
+#h3 {
+    font-size: 2em;
 }
 
 input {
@@ -144,7 +137,7 @@ input {
     color: white;
     font-family: "Poppins";
     padding: 0 10px;
-    height: 40%;
+    height: 0%;
     width: 70%;
 }
 
@@ -153,9 +146,34 @@ input:focus {
 }
 
 #buttons {
+    grid-column: 5/8;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    grid-area: buttons;
+    gap: 0.5em;
+}
+
+.button {
+    height: 4em;
+    width: 8em;
+    border-radius: 9%;
+    outline: none;
+    background-color: #075985;
+    font-family: "Poppins";
+    color: white;
+    font-size: 1.2em;
+}
+
+.button:hover {
+    outline: none;
+    background-color: #9333ea;
+    color: #6ee7b7;
+}
+
+.button:active {
+    background-color: #fde68a;
+    color: #365314;
 }
 
 #main {
