@@ -76,12 +76,13 @@ body {
 
 #header {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-columns: 4 3fr;
     grid-auto-rows: 1fr 1fr;
     background-color: #f9a8d4;
     row-gap: 1.5em;
-    grid-template-areas: "searchbar searchbar searchbar searchbar searchbar searchbar topright topright"
-    "lowleft lowleft lowleft lowleft buttons buttons buttons buttons";
+    grid-template-areas: 
+    "searchbar searchbar searchbar searchbar topright topright topright"
+    "lowleft lowleft lowleft lowleft buttons buttons buttons";
 }
 
 #header>div {
@@ -113,14 +114,7 @@ padding-left: 3em;
 
 #lowleft {
     display: grid;
-    grid-area: lowleft;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "img p"
-    "img h3";
-    justify-content: center;
-    
+    grid-column: 1 / span 4;
 }
 
 #lowleft>img {
