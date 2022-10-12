@@ -197,13 +197,49 @@ input:focus {
     background-color: white;
     border-radius: 1em;
     height: 11em;
-    width: 31em;
+    width: 26em;
     padding: 1em 1em;
+    display: grid;
+    justify-self: end;
+    text-overflow: ellipsis;
 }
+
+.projecttext {
+    width: 20em;
+    height: 5em;
+    text-overflow: ellipsis;
+}
+
+.projecttext>p:last-child {
+    font-size: 0.75em;
+    color: gray;
+}
+
 
 #projects>p, #announcements>p, #trending>p {
     font-size: 1.5em;
 }
+
+.project {
+    display: grid;
+    gap: 0.5em;
+}
+
+.textbuttons {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    gap: 1.5em;
+    align-items: flex-start;
+}
+
+.textbuttons>* {
+    object-fit: fill;
+    height: 2.5em;
+    width: 2.5em;
+}
+
 
 .announceall {
     display: grid;
@@ -220,7 +256,7 @@ input:focus {
     font-size: 0.8em;
 }
 
-.announceborder {
+.announceborder:not(:last-child) {
     border-bottom: 0.1em solid grey;
 }
 
@@ -242,4 +278,9 @@ input:focus {
     align-self: stretch;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0.13em;
+}
+
+.announceborder>p:last-child {
+    color: grey;
+    font-size: 0.75em;
 }
