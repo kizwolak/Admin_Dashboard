@@ -215,6 +215,9 @@ input:focus {
     color: gray;
 }
 
+#projects>p {
+    margin-left: 3.2em;
+}
 
 #projects>p, #announcements>p, #trending>p {
     font-size: 1.5em;
@@ -238,12 +241,20 @@ input:focus {
     object-fit: fill;
     height: 2.5em;
     width: 2.5em;
+    background-color: transparent;
+    border: none;
 }
+.textbuttons>*:hover {
+    filter: invert(79%) sepia(80%) saturate(367%) hue-rotate(353deg) brightness(96%) contrast(108%);
+
+
+}
+
 
 
 .announceall {
     display: grid;
-    gap: 1em;
+    gap: 1.5em;
     background-color: white;
     border-radius: 1em;
     width: 20em;
@@ -256,11 +267,18 @@ input:focus {
     font-size: 0.8em;
 }
 
-.announceborder:not(:last-child) {
-    border-bottom: 0.1em solid grey;
+.announceborder:not(:last-child)::after {
+    background: grey;
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin-top: 1rem;}
+
+.announceborder>p:last-child {
+    color: grey;
+    font-size: 0.75em;
 }
-
-
 
 #trending {
     display: grid;
@@ -277,10 +295,6 @@ input:focus {
     padding: 1em;
     align-self: stretch;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0.13em;
+    gap: 0.25em;
 }
 
-.announceborder>p:last-child {
-    color: grey;
-    font-size: 0.75em;
-}
